@@ -3,9 +3,9 @@ import filetype
 from email.message import EmailMessage
 
 # Connection settings
-PASSWORD = "vdqk kaed irjp mhjl"
-SENDER = "martina.bobokova@gmail.com"
-RECEIVER = "martina.bobokova@gmail.com"
+PASSWORD = "yfqv iehn rpxm egnf"
+SENDER = "pythonidae.daudin@gmail.com"
+RECEIVER = "pythonidae.daudin@gmail.com"
 HOST = "smtp.gmail.com"
 
 

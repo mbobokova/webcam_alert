@@ -56,15 +56,11 @@ while True:
     status_list.append(status)
     status_list = status_list[-2:]
 
-    # Send email / clean folder
+    # Send email
     if status_list[0] == 1 and status_list[1] == 0:
         email_thread = Thread(target=send_email, args=(image_with_object, ))
         email_thread.daemon = True
-        clean_thread = Thread(target=clean_folder)
-        clean_thread.daemon = True
-
         email_thread.start()
-        clean_thread.start()
 
     cv2.imshow("My video", frame)
     key = cv2.waitKey(1)
@@ -73,3 +69,8 @@ while True:
         break
 
 video.release()
+
+# Clean folder
+clean_thread = Thread(target=clean_folder)
+clean_thread.daemon = True
+clean_thread.start()
